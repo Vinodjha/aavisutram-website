@@ -1,0 +1,17 @@
+{
+  "name": "aavisutram-website",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "sync-products": "node scripts/sync-sheet.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.3.2"
+  }
+}
