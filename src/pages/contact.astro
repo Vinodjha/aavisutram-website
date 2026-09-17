@@ -1,10 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import contact from '../data/contact.json';
 
-// TODO: replace these placeholders with the real contact details before launch
-const whatsappNumber = '45XXXXXXXX';
-const instagramHandle = 'aavisutram';
-const email = 'hello@aavisutram.com';
+const { whatsappNumber, instagramHandle, email } = contact;
 ---
 <Layout title="Contact" description="Get in touch with Aavisutram about an order or a question.">
   <section class="section container" style="max-width: 640px;">
@@ -21,10 +19,17 @@ const email = 'hello@aavisutram.com';
       <a class="btn btn-outline" href={`https://instagram.com/${instagramHandle}`} target="_blank" rel="noopener noreferrer">
         Message on Instagram
       </a>
-      <a class="btn btn-outline" href={`mailto:${email}`}>
-        Email {email}
-      </a>
     </div>
+
+    <p style="margin-top:1.5rem; text-align:center;">
+      Or email directly:
+      <br />
+      <strong style="font-size:1.1rem; user-select:all;">{email}</strong>
+      <br />
+      <a href={`mailto:${email}`} style="font-size:0.85rem; color:var(--color-muted);">
+        (click here to open it in your email app)
+      </a>
+    </p>
 
     <p style="margin-top:2rem; color:var(--color-muted);">
       Based in Denmark, currently shipping to Denmark and India — shipping cost and timeline are
