@@ -1,5 +1,6 @@
 ---
 import categories from '../data/categories.json';
+import contact from '../data/contact.json';
 
 interface Props {
   product: {
@@ -16,6 +17,14 @@ interface Props {
 const { product } = Astro.props as Props;
 const categoryMeta = categories.find((c) => c.slug === product.category);
 const searchText = `${product.name} ${product.description} ${categoryMeta?.label ?? ''}`.toLowerCase();
+
+// Human-readable reference code, e.g. "hat-001" -> "HAT-001"
+const refCode = product.id.toUpperCase();
+
+// Pre-fill the WhatsApp message with the piece's name and ref code, so an
+// enquiry already tells her exactly which product it's about.
+const enquiryMessage = `Hi! I'm interested in "${product.name}" (Ref: ${refCode}).`;
+const enquiryLink = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(enquiryMessage)}`;
 ---
 <article
   class="card"
@@ -31,9 +40,15 @@ const searchText = `${product.name} ${product.description} ${categoryMeta?.label
     )}
   </div>
   <div class="card-body">
-    <span class="badge">{product.status}</span>
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem;">
+      <span class="badge">{product.status}</span>
+      <span style="font-family: monospace; font-size: 0.75rem; color: var(--color-muted);">Ref: {refCode}</span>
+    </div>
     <h3 class="card-title">{product.name}</h3>
     <p class="card-desc">{product.description}</p>
     <p class="card-price">{product.priceRange}</p>
+    <a class="btn btn-outline" href={enquiryLink} target="_blank" rel="noopener noreferrer" style="text-align:center; margin-top:0.4rem;">
+      Enquire about this
+    </a>
   </div>
 </article>
