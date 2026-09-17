@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import categories from '../../data/categories.json';
+import products from '../../data/products.json';
+
+export function getStaticPaths() {
+  return categories.map((cat) => ({
+    params: { category: cat.slug },
+    props: { categoryMeta: cat },
+  }));
+}
+
+const { categoryMeta } = Astro.props;
+const categoryProducts = products.filter((p) => p.category === categoryMeta.slug);
+---
+<Layout title={categoryMeta.label} description={categoryMeta.description}>
+  <section class="section container">
+    <p><a href="/shop">&larr; All pieces</a></p>
+    <h1 class="section-title">{categoryMeta.icon} {categoryMeta.label}</h1>
+    <p class="section-subtitle">{categoryMeta.description}</p>
+
+    {categoryProducts.length > 0 ? (
+      <div class="grid">
+        {categoryProducts.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    ) : (
+      <p class="empty-state">No pieces listed in this category yet — check back soon, or ask about a custom order.</p>
+    )}
+  </section>
+</Layout>

@@ -1,0 +1,39 @@
+---
+import categories from '../data/categories.json';
+
+interface Props {
+  product: {
+    id: string;
+    name: string;
+    category: string;
+    description: string;
+    priceRange: string;
+    status: string;
+    image: string | null;
+  };
+}
+
+const { product } = Astro.props as Props;
+const categoryMeta = categories.find((c) => c.slug === product.category);
+const searchText = `${product.name} ${product.description} ${categoryMeta?.label ?? ''}`.toLowerCase();
+---
+<article
+  class="card"
+  data-product-card
+  data-category={product.category}
+  data-search={searchText}
+>
+  <div class="card-media">
+    {product.image ? (
+      <img src={product.image} alt={product.name} loading="lazy" />
+    ) : (
+      <span aria-hidden="true">{categoryMeta?.icon ?? '🧶'}</span>
+    )}
+  </div>
+  <div class="card-body">
+    <span class="badge">{product.status}</span>
+    <h3 class="card-title">{product.name}</h3>
+    <p class="card-desc">{product.description}</p>
+    <p class="card-price">{product.priceRange}</p>
+  </div>
+</article>

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "hat-001",
+    "name": "Sample Slouchy Beanie",
+    "category": "hats",
+    "description": "Placeholder listing — replace with a real piece and photo. Soft merino-blend slouchy beanie with a folded brim.",
+    "priceRange": "Contact for price",
+    "status": "Made to order",
+    "image": null
+  },
+  {
+    "id": "hat-002",
+    "name": "Sample Ribbed Beanie",
+    "category": "hats",
+    "description": "Placeholder listing. Classic ribbed beanie, available in custom colours.",
+    "priceRange": "Contact for price",
+    "status": "One of a kind",
+    "image": null
+  },
+  {
+    "id": "socks-001",
+    "name": "Sample Fair Isle Socks",
+    "category": "socks",
+    "description": "Placeholder listing. Fair Isle patterned socks, hand-knit toe-up.",
+    "priceRange": "Contact for price",
+    "status": "Made to order",
+    "image": null
+  },
+  {
+    "id": "socks-002",
+    "name": "Sample Cabled Ankle Socks",
+    "category": "socks",
+    "description": "Placeholder listing. Cozy cabled ankle socks in wool blend yarn.",
+    "priceRange": "Contact for price",
+    "status": "In stock",
+    "image": null
+  },
+  {
+    "id": "sweaters-001",
+    "name": "Sample Aran Cardigan",
+    "category": "sweaters",
+    "description": "Placeholder listing. Classic Aran-cabled cardigan, made to size.",
+    "priceRange": "Contact for price",
+    "status": "Made to order",
+    "image": null
+  },
+  {
+    "id": "sweaters-002",
+    "name": "Sample Chunky Pullover",
+    "category": "sweaters",
+    "description": "Placeholder listing. Oversized chunky-knit pullover.",
+    "priceRange": "Contact for price",
+    "status": "One of a kind",
+    "image": null
+  },
+  {
+    "id": "shawls-001",
+    "name": "Sample Lace Shawl",
+    "category": "shawls",
+    "description": "Placeholder listing. Delicate lace-pattern shawl, hand-blocked.",
+    "priceRange": "Contact for price",
+    "status": "One of a kind",
+    "image": null
+  },
+  {
+    "id": "shawls-002",
+    "name": "Sample Textured Wrap",
+    "category": "shawls",
+    "description": "Placeholder listing. Textured crochet wrap for cooler evenings.",
+    "priceRange": "Contact for price",
+    "status": "Made to order",
+    "image": null
+  },
+  {
+    "id": "blankets-001",
+    "name": "Sample Baby Blanket",
+    "category": "blankets",
+    "description": "Placeholder listing. Soft baby blanket in a gentle granny-square pattern.",
+    "priceRange": "Contact for price",
+    "status": "Made to order",
+    "image": null
+  },
+  {
+    "id": "blankets-002",
+    "name": "Sample Throw Blanket",
+    "category": "blankets",
+    "description": "Placeholder listing. Chunky knit throw for the sofa.",
+    "priceRange": "Contact for price",
+    "status": "In stock",
+    "image": null
+  },
+  {
+    "id": "table-cloths-001",
+    "name": "Sample Crochet Table Runner",
+    "category": "table-cloths",
+    "description": "Placeholder listing. Crocheted table runner with a scalloped edge.",
+    "priceRange": "Contact for price",
+    "status": "One of a kind",
+    "image": null
+  },
+  {
+    "id": "table-cloths-002",
+    "name": "Sample Round Doily Set",
+    "category": "table-cloths",
+    "description": "Placeholder listing. Set of round doilies in fine cotton thread.",
+    "priceRange": "Contact for price",
+    "status": "In stock",
+    "image": null
+  }
+]

@@ -1,0 +1,22 @@
+---
+// TODO: replace placeholder contact details below with the real ones before launch.
+const whatsappNumber = '45XXXXXXXX'; // country code + number, no spaces or symbols
+const instagramHandle = 'aavisutram'; // without the @
+const email = 'hello@aavisutram.com';
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong style="color: var(--color-text);">Aavisutram</strong>
+      <p>Hand-knit and crochet pieces, made to order — based in Denmark, shipped with care to Denmark and India.</p>
+    </div>
+    <div class="footer-links">
+      <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href={`https://instagram.com/${instagramHandle}`} target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href={`mailto:${email}`}>{email}</a>
+    </div>
+  </div>
+  <div class="container" style="margin-top: 1.5rem;">
+    <small>&copy; {new Date().getFullYear()} Aavisutram. All pieces are handmade to order; small variations are part of the craft.</small>
+  </div>
+</footer>

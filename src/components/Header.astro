@@ -1,0 +1,25 @@
+---
+import categories from '../data/categories.json';
+
+const { pathname } = Astro.url;
+---
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">Aavisutram</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</a>
+      <div class="nav-dropdown">
+        <a href="/shop">Shop</a>
+        <div class="nav-dropdown-panel">
+          <a href="/shop">All pieces</a>
+          {categories.map((cat) => (
+            <a href={`/shop/${cat.slug}`}>{cat.icon} {cat.label}</a>
+          ))}
+        </div>
+      </div>
+      <a href="/about">About</a>
+      <a href="/custom-orders">Custom Orders</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>

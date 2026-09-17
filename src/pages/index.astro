@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import categories from '../data/categories.json';
+import products from '../data/products.json';
+
+const featured = products.slice(0, 4);
+---
+<Layout title="Handmade knitwear & crochet">
+  <section class="hero container">
+    <h1>Hand-knit &amp; crochet, made with care</h1>
+    <p>
+      Aavisutram is a small, made-to-order knitting and crochet studio based in Denmark —
+      every piece is worked by hand, one stitch at a time.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="/shop">Browse all pieces</a>
+      <a class="btn btn-outline" href="/custom-orders">Ask about a custom order</a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">Shop by category</h2>
+    <p class="section-subtitle">Every piece is organised by type — new categories are added as the collection grows.</p>
+    <div class="category-grid">
+      {categories.map((cat) => (
+        <a class="category-tile" href={`/shop/${cat.slug}`}>
+          <span class="icon" aria-hidden="true">{cat.icon}</span>
+          <span class="label">{cat.label}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">Recently added</h2>
+    <p class="section-subtitle">A few pieces from the collection.</p>
+    <div class="grid">
+      {featured.map((product) => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+    <p style="margin-top: 1.5rem;"><a href="/shop">See everything &rarr;</a></p>
+  </section>
+
+  <section class="section container" style="text-align:center; background:var(--color-surface); border-radius:var(--radius); border:1px solid var(--color-border);">
+    <h2 class="section-title">Looking for something specific?</h2>
+    <p class="section-subtitle">Every piece is made to order, and custom colours, sizes and patterns are always welcome.</p>
+    <a class="btn" href="/contact">Get in touch</a>
+  </section>
+</Layout>

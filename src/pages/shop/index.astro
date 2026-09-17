@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import categories from '../../data/categories.json';
+import products from '../../data/products.json';
+---
+<Layout title="Shop all pieces" description="Browse every hand-knit and crochet piece from Aavisutram — search or filter by category.">
+  <section class="section container">
+    <h1 class="section-title">Shop all pieces</h1>
+    <p class="section-subtitle">Search by name, or filter by category. New pieces are added regularly.</p>
+
+    <div class="shop-controls">
+      <input
+        type="search"
+        class="search-input"
+        id="product-search"
+        placeholder="Search e.g. 'shawl', 'blue', 'baby'…"
+        aria-label="Search products"
+      />
+    </div>
+
+    <div class="filter-chips" id="category-filters" role="group" aria-label="Filter by category">
+      <button type="button" class="filter-chip active" data-filter-category="all">All</button>
+      {categories.map((cat) => (
+        <button type="button" class="filter-chip" data-filter-category={cat.slug}>
+          {cat.icon} {cat.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid" id="product-grid" style="margin-top: 2rem;">
+      {products.map((product) => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+
+    <p class="empty-state" id="empty-state" hidden>No pieces match that search yet — try a different word or category.</p>
+  </section>
+</Layout>
+
+<script>
+  const searchInput = document.getElementById('product-search') as HTMLInputElement | null;
+  const filterButtons = document.querySelectorAll<HTMLButtonElement>('[data-filter-category]');
+  const cards = document.querySelectorAll<HTMLElement>('[data-product-card]');
+  const emptyState = document.getElementById('empty-state');
+
+  let activeCategory = 'all';
+
+  function applyFilters() {
+    const query = (searchInput?.value ?? '').trim().toLowerCase();
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+      const matchesSearch = query === '' || (card.dataset.search ?? '').includes(query);
+      const visible = matchesCategory && matchesSearch;
+      card.style.display = visible ? '' : 'none';
+      if (visible) visibleCount += 1;
+    });
+
+    if (emptyState) {
+      emptyState.hidden = visibleCount !== 0;
+    }
+  }
+
+  searchInput?.addEventListener('input', applyFilters);
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.filterCategory ?? 'all';
+      filterButtons.forEach((b) => b.classList.toggle('active', b === btn));
+      applyFilters();
+    });
+  });
+
+  // Support ?category=slug deep links (e.g. from the homepage tiles)
+  const params = new URLSearchParams(window.location.search);
+  const initialCategory = params.get('category');
+  if (initialCategory) {
+    const match = document.querySelector<HTMLButtonElement>(`[data-filter-category="${initialCategory}"]`);
+    match?.click();
+  }
+</script>
