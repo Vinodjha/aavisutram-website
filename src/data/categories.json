@@ -1,8 +1,11 @@
 [
-  { "slug": "hats", "label": "Hats", "icon": "🧢", "description": "Beanies, slouchy hats and everything for keeping heads warm." },
+  { "slug": "hats", "label": "Caps", "icon": "🧢", "description": "Caps and beanies, hand-knit and crocheted." },
   { "slug": "socks", "label": "Socks", "icon": "🧦", "description": "Hand-knit socks in classic and custom patterns." },
-  { "slug": "sweaters", "label": "Sweaters", "icon": "🧥", "description": "Pullovers, cardigans and jumpers, made to size." },
+  { "slug": "sweaters", "label": "Sweaters", "icon": "🧥", "description": "Pullovers and jumpers, made to size." },
+  { "slug": "cardigans", "label": "Cardigans", "icon": "🧶", "description": "Open-front cardigans, hand-knit to size." },
   { "slug": "shawls", "label": "Shawls", "icon": "🌸", "description": "Lightweight shawls and wraps in lace and textured patterns." },
+  { "slug": "ponchos", "label": "Ponchos", "icon": "🫖", "description": "Hand-knit and crocheted ponchos." },
   { "slug": "blankets", "label": "Blankets", "icon": "🛏️", "description": "Throws and baby blankets in soft, cozy yarns." },
-  { "slug": "table-cloths", "label": "Table Cloths", "icon": "🕸️", "description": "Crocheted table cloths, runners and doilies." }
+  { "slug": "table-cloths", "label": "Table Cloths", "icon": "🕸️", "description": "Crocheted table cloths, runners and doilies." },
+  { "slug": "home-decor", "label": "Home Décor", "icon": "🏡", "description": "Crocheted and knit pieces for around the home." }
 ]

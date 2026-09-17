@@ -5,7 +5,9 @@ const { pathname } = Astro.url;
 ---
 <header class="site-header">
   <div class="container">
-    <a class="logo" href="/">Aavisutram</a>
+    <a class="logo" href="/">
+      <img src="/aavisutram-logo.jpg" alt="Aavisutram" class="logo-img" />
+    </a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="/" aria-current={pathname === '/' ? 'page' : undefined}>Home</a>
       <div class="nav-dropdown">

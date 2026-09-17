@@ -1,20 +1,20 @@
 [
   {
-    "id": "hat-001",
+    "id": "hats-001",
     "name": "Sample Slouchy Beanie",
     "category": "hats",
     "description": "Placeholder listing — replace with a real piece and photo. Soft merino-blend slouchy beanie with a folded brim.",
     "priceRange": "Contact for price",
-    "status": "Made to order",
+    "status": "Ready to ship",
     "image": null
   },
   {
-    "id": "hat-002",
+    "id": "hats-002",
     "name": "Sample Ribbed Beanie",
     "category": "hats",
     "description": "Placeholder listing. Classic ribbed beanie, available in custom colours.",
     "priceRange": "Contact for price",
-    "status": "One of a kind",
+    "status": "Ready to ship",
     "image": null
   },
   {
@@ -23,7 +23,7 @@
     "category": "socks",
     "description": "Placeholder listing. Fair Isle patterned socks, hand-knit toe-up.",
     "priceRange": "Contact for price",
-    "status": "Made to order",
+    "status": "Ready to ship",
     "image": null
   },
   {
@@ -32,25 +32,43 @@
     "category": "socks",
     "description": "Placeholder listing. Cozy cabled ankle socks in wool blend yarn.",
     "priceRange": "Contact for price",
-    "status": "In stock",
+    "status": "Ready to ship",
     "image": null
   },
   {
     "id": "sweaters-001",
-    "name": "Sample Aran Cardigan",
-    "category": "sweaters",
-    "description": "Placeholder listing. Classic Aran-cabled cardigan, made to size.",
-    "priceRange": "Contact for price",
-    "status": "Made to order",
-    "image": null
-  },
-  {
-    "id": "sweaters-002",
     "name": "Sample Chunky Pullover",
     "category": "sweaters",
     "description": "Placeholder listing. Oversized chunky-knit pullover.",
     "priceRange": "Contact for price",
-    "status": "One of a kind",
+    "status": "Ready to ship",
+    "image": null
+  },
+  {
+    "id": "sweaters-002",
+    "name": "Sample Textured Jumper",
+    "category": "sweaters",
+    "description": "Placeholder listing. Textured stitch jumper, hand-knit.",
+    "priceRange": "Contact for price",
+    "status": "Ready to ship",
+    "image": null
+  },
+  {
+    "id": "cardigans-001",
+    "name": "Sample Aran Cardigan",
+    "category": "cardigans",
+    "description": "Placeholder listing. Classic Aran-cabled cardigan, open front.",
+    "priceRange": "Contact for price",
+    "status": "Ready to ship",
+    "image": null
+  },
+  {
+    "id": "cardigans-002",
+    "name": "Sample Button-Front Cardigan",
+    "category": "cardigans",
+    "description": "Placeholder listing. Fitted button-front cardigan.",
+    "priceRange": "Contact for price",
+    "status": "Ready to ship",
     "image": null
   },
   {
@@ -59,7 +77,7 @@
     "category": "shawls",
     "description": "Placeholder listing. Delicate lace-pattern shawl, hand-blocked.",
     "priceRange": "Contact for price",
-    "status": "One of a kind",
+    "status": "Ready to ship",
     "image": null
   },
   {
@@ -68,7 +86,25 @@
     "category": "shawls",
     "description": "Placeholder listing. Textured crochet wrap for cooler evenings.",
     "priceRange": "Contact for price",
-    "status": "Made to order",
+    "status": "Ready to ship",
+    "image": null
+  },
+  {
+    "id": "ponchos-001",
+    "name": "Sample Fringed Poncho",
+    "category": "ponchos",
+    "description": "Placeholder listing. Crocheted poncho with a fringed hem.",
+    "priceRange": "Contact for price",
+    "status": "Ready to ship",
+    "image": null
+  },
+  {
+    "id": "ponchos-002",
+    "name": "Sample Textured Poncho",
+    "category": "ponchos",
+    "description": "Placeholder listing. Chunky textured knit poncho.",
+    "priceRange": "Contact for price",
+    "status": "Ready to ship",
     "image": null
   },
   {
@@ -77,7 +113,7 @@
     "category": "blankets",
     "description": "Placeholder listing. Soft baby blanket in a gentle granny-square pattern.",
     "priceRange": "Contact for price",
-    "status": "Made to order",
+    "status": "Ready to ship",
     "image": null
   },
   {
@@ -86,7 +122,7 @@
     "category": "blankets",
     "description": "Placeholder listing. Chunky knit throw for the sofa.",
     "priceRange": "Contact for price",
-    "status": "In stock",
+    "status": "Ready to ship",
     "image": null
   },
   {
@@ -95,7 +131,7 @@
     "category": "table-cloths",
     "description": "Placeholder listing. Crocheted table runner with a scalloped edge.",
     "priceRange": "Contact for price",
-    "status": "One of a kind",
+    "status": "Ready to ship",
     "image": null
   },
   {
@@ -104,7 +140,25 @@
     "category": "table-cloths",
     "description": "Placeholder listing. Set of round doilies in fine cotton thread.",
     "priceRange": "Contact for price",
-    "status": "In stock",
+    "status": "Ready to ship",
+    "image": null
+  },
+  {
+    "id": "home-decor-001",
+    "name": "Sample Cushion Cover",
+    "category": "home-decor",
+    "description": "Placeholder listing. Crocheted decorative cushion cover.",
+    "priceRange": "Contact for price",
+    "status": "Ready to ship",
+    "image": null
+  },
+  {
+    "id": "home-decor-002",
+    "name": "Sample Wall Hanging",
+    "category": "home-decor",
+    "description": "Placeholder listing. Hand-knit textured wall hanging.",
+    "priceRange": "Contact for price",
+    "status": "Ready to ship",
     "image": null
   }
 ]
