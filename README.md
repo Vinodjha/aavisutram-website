@@ -36,8 +36,11 @@ Hand-knit & crochet portfolio/marketing site. Static site built with
 
 Search the codebase for `TODO` / `Sample` / `XXXXXXXX`:
 
-- `src/components/Footer.astro` and `src/pages/contact.astro` — real
-  WhatsApp number, Instagram handle, email.
+- `src/data/contact.json` — the one place holding WhatsApp number,
+  Instagram handle and email; Footer, Contact page and every product's
+  "Enquire" button all read from here. **Double-check the Instagram handle
+  is actually hers before publishing** — it was set to match the brand
+  name as a convention, not verified against a real account.
 - `src/pages/about.astro` — her actual story.
 - `src/data/products.json` — replace every placeholder product with a real
   one (see "Adding a product" below).
